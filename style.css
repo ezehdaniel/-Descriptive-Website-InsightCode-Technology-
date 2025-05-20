@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  /* font-family: Aclonica; */
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s linear;
+  text-transform: capitalize;
+}
+
+body, h1, h2, p, ul, li { 
+  box-sizing: border-box;
+}
+
+body {
+  font-family:  "roboto", serif;
+  background-image: url('insight/background.jpeg'); 
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+}
+
+
+html {
+  font-size: 75%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+.image{
+    width: 32px;
+    padding-right: 1px;
+  }
+  section{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  align-items: center;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.header  .navbar a{
+  margin-left: 2rem;
+  color: black;
+  font-size: 2rem;
+}
+ .header .navbar a:hover{
+  color: rgb(42, 42, 172);
+ }
+ .header .logo {
+  color: rgb(42, 42, 172);
+  font-size: 34px;
+  font-weight: bold;
+}
+ 
+.bx{
+  color: rgb(42, 42, 172);
+ }
+
+ #menu-btn{
+  cursor: pointer;
+  color: rgb(42, 42, 172);
+  font-size: 2.5rem;
+  display: none;
+ }
+
+#menu-icon{
+  font-size: 3.5rem;
+  color: rgb(42, 42, 172);
+  display: none;
+}
+#navbar a{
+  position: relative;
+  font-size: 1.8rem;
+  color: black;
+  margin-left: 4rem;
+  font-weight: 500; 
+  transition: 0.3s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+
+#navbar a:hover{
+   color: rgb(42, 42, 172);
+}
+
+
+.default-logo {
+  display: inline-block;
+  transition: opacity 0.3s ease; 
+}
+
+.hover-logo {
+  display: none;
+  color: rgb(42, 42, 172);
+  transition: linear 0.4s ease-in-out; 
+}
+
+.logo:hover .default-logo {
+  display: none; 
+}
+
+.logo:hover .hover-logo {
+  display: inline-block;
+  margin-right: 4rem;
+  position: fixed;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  color: white;
+}
+
+.hero-content {
+  max-width: 60%;
+} 
+
+#typewriter {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: rgb(42, 42, 172);
+  white-space: nowrap;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.8em;
+  background-color: rgb(42, 42, 172);
+  margin-left: 2px;
+  animation: blink 0.7s step-end infinite;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+}
+
+#typing {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-family:  serif;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black;
+  width: 0;
+  animation: typing 5s steps(50) infinite, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  0% {
+      width: 0;
+  }
+  100% {
+      width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+      border-color: transparent;
+  }
+}
+.hero .slide img{
+  height: 25%;
+  width: 50%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.hero .slide{
+  background-color: var(--light-bg);
+  border-radius: .5rem;
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+
+       
+.slide { 
+        width: 100%;
+         transition: transform 1s ease;
+        }
+        
+ @keyframes slide {
+       0% { transform: translateX(0%);
+       }
+      33.33% { 
+        transform: translateX(-100%);
+      }
+     66.66% {
+       transform: translateX(-200%);
+       }
+        100% { transform: translateX(0%); 
+        }
+       }
+
+
+ section.about {
+     padding: 40px 20px;
+     background-color: rgb(132, 210, 247);
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 20px;
+     max-width: 1200px;
+     margin: auto;
+     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+     margin-bottom: 5rem;
+    }
+    
+        .about-text {
+          flex: 1;
+      }
+  
+      .about-text h2 {
+        font-size: 4rem;
+        color: rgb(42, 42, 172);
+        margin-bottom: 15px;
+        text-align: center;
+      }
+  
+      .about-text p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #242222;
+        margin-bottom: 10px;
+      }
+  
+      .about-img img{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+      }
+  
+     
+      @media (max-width: 768px) {
+        section.about {
+          flex-direction: column;
+        }
+  
+        .about-img video {
+          max-width: 100%;
+        }
+      }
+
+      .services-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+        gap: 1rem;
+        margin-top: 2rem;
+        background-color: rgb(132, 210, 247);
+      }
+
+      img {
+        width: 80%;
+        margin-left: 2rem;
+      }
+      
+      .services-container .box {
+        background-color: white;
+        position: relative;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        box-shadow:  5px 5px 5px hsla(3, 2%, 2%, 0.1);
+      }
+
+      .services-container .box:hover{
+        transform: scale(1.05);
+      }
+      
+      .services-container .box .content h2 {
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      .services-container .box .content p{
+        font-size: 1.2rem;
+        text-align: center;
+      }
+
+      h1{
+        font-size: 4rem;
+        text-align: center;
+        color: rgb(42, 42, 172);
+      }
+      .custom-hr {
+        border: 0;
+        height: 2px;
+        background-color: #0056b3; 
+        margin: 2px 0;
+      }
+
+    h2{
+        margin-bottom: 3rem;
+        color: rgb(42, 42, 172);
+        font-size: 4rem;
+        text-align: center;
+    }
+
+  .projects .slide{
+    background-color: rgb(132, 210, 247);
+    border-radius: .5rem;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .projects .slide video{
+    width: 100%;
+  height: auto;
+  object-fit: cover; 
+  border-radius: 5px; 
+  }
+  
+  .projects .slide h3{
+    margin: 1.5rem 0;
+    font-size: 2rem;
+    color: var(--white);
+  }
+  
+  .projects .slide p{
+    line-height: 2rem;
+    font-size: 1.6rem;
+    color: var(--light-white);
+  }
+  
+  .projects .slide i{
+    color: var(--orange);
+    font-size: 1.5rem;
+  }
+  
+  .contact{
+    background-color: rgb(132, 210, 247);
+    height: 100vh;
+    box-shadow:  5px 5px 5px hsla(3, 2%, 2%, 0.1);
+    border-radius: 20rem;
+}
+
+  .contact form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 5rem 0;
+    text-align: center;
+  }
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.3rem;
+    color: black;
+    background-color: white;
+    border-radius: 2rem;
+    border: 2px solid rgb(42, 42, 172);
+    margin: 1.5rem 0;
+    resize: none;
+}
+.contact form .btn{
+  padding: 1rem 3rem;
+  border-color: rgb(42, 42, 172);
+  box-shadow: 0 0 25px black;
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  border: 2px solid transparent;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  background-color: rgb(42, 42, 172);
+  color: white;
+}
+
+
+.contact form .btn:hover{
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 25px black,
+              0 0 50px black;
+
+}
+
+
+@media(max-width: 768px) {
+  #menu-btn{
+    display: inline-block;
+  }
+  #menu-btn.bx-x{
+    transform: rotate(180deg);
+  }
+  .header .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar{
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    border-top: .1rem solid rgb(42, 42, 172);
+    border-bottom: .1rem solid rgb(42, 42, 172);
+    background-color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar a{
+    display: block;
+    margin: 2rem;
+  }
+#typewriter{
+  font-size: 1.5rem;
+}
+   
+ 
+ }
